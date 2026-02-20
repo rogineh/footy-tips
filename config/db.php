@@ -5,9 +5,9 @@
  */
 
 $db_host = 'localhost';
-$db_user = 'root'; // User should change this
-$db_pass = '';     // User should change this
-$db_name = 'footy_tips';
+$db_user = 'rokitsit_footy'; // User should change this
+$db_pass = 'Footy759459:';     // User should change this
+$db_name = 'rokitsit_footy';
 
 // Create connection
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
