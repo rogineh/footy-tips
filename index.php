@@ -1,7 +1,18 @@
 <?php
+ob_start();
 require_once 'config/db.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
+}
+
+// Redirect if already logged in
+if (isset($_SESSION['user_id'])) {
+    if ($_SESSION['role'] === 'admin') {
+        header("Location: admin/index.php");
+    } else {
+        header("Location: member/index.php");
+    }
+    exit;
 }
 
 $error = '';
