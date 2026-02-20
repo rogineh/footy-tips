@@ -1,9 +1,9 @@
 <?php
+require_once '../includes/auth.php';
+require_member();
+require_once '../includes/functions.php';
 $page_title = "Enter Tips";
 require_once '../includes/header.php';
-require_once '../includes/auth.php';
-require_once '../includes/functions.php';
-require_member();
 
 $uid = $_SESSION['user_id'];
 $round_id = isset($_GET['round_id']) ? (int) $_GET['round_id'] : 0;

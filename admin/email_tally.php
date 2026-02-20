@@ -1,9 +1,9 @@
 <?php
+require_once '../includes/auth.php';
+require_admin();
+require_once '../includes/functions.php';
 $page_title = "Email Tally";
 require_once '../includes/header.php';
-require_once '../includes/auth.php';
-require_once '../includes/functions.php';
-require_admin();
 
 $sport = $_GET['sport'] ?? '';
 if ($sport !== 'NRL' && $sport !== 'AFL') {
@@ -58,7 +58,7 @@ if (isset($_POST['send_emails'])) {
 Current Tally for <?php echo $sport; ?>:
 
 <?php foreach ($tally as $index => $t): ?>
-    <?php echo ($index + 1); ?>. <?php echo $t['display_name']; ?>: <?php echo $t['points']; ?> points
+        <?php echo ($index + 1); ?>. <?php echo $t['display_name']; ?>: <?php echo $t['points']; ?> points
 <?php endforeach; ?>
         </pre>
     </div>

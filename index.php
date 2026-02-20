@@ -1,6 +1,8 @@
 <?php
-$page_title = "Login";
-require_once 'includes/header.php';
+require_once 'config/db.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $error = '';
 
@@ -41,6 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->close();
     }
 }
+
+$page_title = "Login";
+require_once 'includes/header.php';
 ?>
 
 <div class="card" style="max-width: 400px; margin: 4rem auto;">

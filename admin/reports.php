@@ -1,9 +1,9 @@
 <?php
+require_once '../includes/auth.php';
+require_admin();
+require_once '../includes/functions.php';
 $page_title = "Admin Reports";
 require_once '../includes/header.php';
-require_once '../includes/auth.php';
-require_once '../includes/functions.php';
-require_admin();
 
 $rounds = $conn->query("SELECT * FROM rounds ORDER BY year DESC, sport, round_number DESC");
 

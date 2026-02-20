@@ -1,8 +1,8 @@
 <?php
-$page_title = "Admin Dashboard";
-require_once '../includes/header.php';
 require_once '../includes/auth.php';
 require_admin();
+$page_title = "Admin Dashboard";
+require_once '../includes/header.php';
 
 // Get counts for dashboard
 $pending_count = $conn->query("SELECT COUNT(*) FROM users WHERE is_approved = 0")->fetch_row()[0];

@@ -1,9 +1,9 @@
 <?php
+require_once '../includes/auth.php';
+require_member();
+require_once '../includes/functions.php';
 $page_title = "Dashboard";
 require_once '../includes/header.php';
-require_once '../includes/auth.php';
-require_once '../includes/functions.php';
-require_member();
 
 $uid = $_SESSION['user_id'];
 $user = $conn->query("SELECT * FROM users WHERE id = $uid")->fetch_assoc();

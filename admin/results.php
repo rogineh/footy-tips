@@ -1,8 +1,8 @@
 <?php
-$page_title = "Enter Results";
-require_once '../includes/header.php';
 require_once '../includes/auth.php';
 require_admin();
+$page_title = "Enter Results";
+require_once '../includes/header.php';
 
 $msg = '';
 
