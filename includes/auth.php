@@ -2,6 +2,10 @@
 /**
  * Authentication Helpers
  */
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once dirname(__DIR__) . '/config/db.php';
 
 function is_logged_in()
 {
